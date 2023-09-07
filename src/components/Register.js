@@ -6,8 +6,11 @@ import { logoApp, namaApp } from "../services/config";
 import { Row, Col, Image } from "react-bootstrap";
 import { register } from "../slices/auth";
 import { clearMessage } from "../slices/message";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const Register = () => {
+  let navigate = useNavigate();
+
   const [successful, setSuccessful] = useState(false);
 
   const { message } = useSelector((state) => state.message);
@@ -55,6 +58,7 @@ const Register = () => {
       .unwrap()
       .then(() => {
         setSuccessful(true);
+        navigate("/login");
       })
       .catch(() => {
         setSuccessful(false);
