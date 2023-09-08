@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Home from "./components/Home";
+import TopUp from "./components/TopUp";
 
 import { logout } from "./slices/auth";
 import EventBus from "./common/EventBus";
@@ -38,6 +39,7 @@ const App = () => {
             <Route path="/registration" element={<Register />} />
             <Route path="/login" element={<Login />} />
             <Route path="/home" element={<Home />} />
+            <Route path="/topup" element={<TopUp />} />
           </Routes>
         </div>
       </div>

@@ -26,6 +26,19 @@ const login = (email, password) => {
     });
 };
 
+// const topup = (top_up_amount) => {
+//   return axios
+//     .post(API_URL + "topup", {
+//       top_up_amount,
+//     })
+//     .then((response) => {
+//       if (response.data.data) {
+//         localStorage.setItem("user", JSON.stringify(response.data));
+//       }
+//       return response.data;
+//     });
+// };
+
 const logout = () => {
   localStorage.removeItem("user");
 };
@@ -34,6 +47,7 @@ const authService = {
   register,
   login,
   logout,
+  // topup,
 };
 
 export default authService;

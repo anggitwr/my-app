@@ -19,11 +19,16 @@ const getBanner = () => {
   return axios.get(API_URL + "banner", { headers: authHeader() });
 };
 
+const postTopUp = () => {
+  return axios.post(API_URL + "topup", { headers: authHeader() });
+};
+
 const userService = {
   getProfile,
   getBalance,
   getService,
   getBanner,
+  postTopUp,
 };
 
 export default userService;
